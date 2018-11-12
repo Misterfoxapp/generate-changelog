@@ -1,22 +1,19 @@
 #!/usr/bin/env node
-'use strict';
 
-var Bluebird = require('bluebird');
+const Bluebird = require('bluebird')
 
-var CLI       = require('../lib/cli');
-var Changelog = require('../lib');
-var File      = require('../lib/file');
+const CLI = require('../lib/cli')
+const Changelog = require('../lib')
+const File = require('../lib/file')
 
-CLI.parse(process.argv);
+CLI.parse(process.argv)
 
 return Bluebird.all([
-  Changelog.generate(CLI),
-  File.readIfExists(CLI.file)
+    Changelog.generate(CLI),
+    File.readIfExists(CLI.file)
 ])
-.spread(function (newLogs, oldLogs) {
-  return File.writeToFile(CLI.file, newLogs + oldLogs);
-})
-.catch(function (err) {
-  console.error(err);
-  process.exit(1);
-});
+    .spread((newLogs, oldLogs) => File.writeToFile(CLI.file, newLogs + oldLogs))
+    .catch(err => {
+        console.error(err)
+        process.exit(1)
+    })
