@@ -1,3 +1,22 @@
+### 1.8.0 (2018-11-12)
+
+##### Chores
+
+*  add foxintelligence module information ([f55ceae1](https://github.com/jerome-fox/generate-changelog/commit/f55ceae1a02aa0b581c142b3b610eb41ef27b9ac))
+
+##### Documentation Changes
+
+* **readme:**  mention commit ranges ([#43](https://github.com/jerome-fox/generate-changelog/pull/43)) ([b4a75c49](https://github.com/jerome-fox/generate-changelog/commit/b4a75c49c66b265e768c8d6477a409b5e722b8da))
+
+##### New Features
+
+*  add ticket notion url ([df7a5398](https://github.com/jerome-fox/generate-changelog/commit/df7a5398758218ada27d39f542d3eaa0153e4456))
+*  add version option if the project is not in nodejs ([413d0271](https://github.com/jerome-fox/generate-changelog/commit/413d0271fe060fea9846162e4c0faa2e7377d453))
+
+##### Refactors
+
+*  use es6 features ([0ed11d1a](https://github.com/jerome-fox/generate-changelog/commit/0ed11d1a80cd547945364574d74a7e32f354ee8b))
+
 #### 1.7.1 (2018-03-28)
 
 ##### Bug Fixes
