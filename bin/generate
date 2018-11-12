@@ -8,10 +8,11 @@ const File = require('../lib/file')
 
 CLI.parse(process.argv)
 
-return Bluebird.all([
-    Changelog.generate(CLI),
-    File.readIfExists(CLI.file)
-])
+return Bluebird
+    .all([
+        Changelog.generate(CLI),
+        File.readIfExists(CLI.file)
+    ])
     .spread((newLogs, oldLogs) => File.writeToFile(CLI.file, newLogs + oldLogs))
     .catch(err => {
         console.error(err)
