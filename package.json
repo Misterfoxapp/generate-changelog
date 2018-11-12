@@ -11,9 +11,9 @@
     "test": "test"
   },
   "scripts": {
-    "release:major": "./bin/generate -M && git add CHANGELOG.md && git commit -m 'changelog updated' && npm version major && git push origin && git push origin --tags",
-    "release:minor": "./bin/generate -m && git add CHANGELOG.md && git commit -m 'changelog updated' && npm version minor && git push origin && git push origin --tags",
-    "release:patch": "./bin/generate -p && git add CHANGELOG.md && git commit -m 'changelog updated' && npm version patch && git push origin && git push origin --tags",
+    "release:major": "./bin/generate -M && git add CHANGELOG.md && git commit -m 'changelog updated' && npm version major && git push origin && git push origin --tags && npm publish",
+    "release:minor": "./bin/generate -m && git add CHANGELOG.md && git commit -m 'changelog updated' && npm version minor && git push origin && git push origin --tags && npm publish",
+    "release:patch": "./bin/generate -p && git add CHANGELOG.md && git commit -m 'changelog updated' && npm version patch && git push origin && git push origin --tags && npm publish",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint .",
     "test": "NODE_ENV=test istanbul cover _mocha -- test --recursive --timeout 30000",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jerome-fox/generate-changelog.git"
+    "url": "git+https://github.com/Misterfoxapp/dev-npm-generate-changelog.git"
   },
   "keywords": [
     "changelog",
